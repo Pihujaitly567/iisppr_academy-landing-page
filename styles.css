@@ -180,9 +180,8 @@ ul {
 
 /* Hero Section */
 .hero {
-    margin-top: 70px; 
     position: relative;
-    padding: 8rem 0;
+    padding: 12rem 0 8rem 0;
     background: var(--hero-bg);
     color: white;
     overflow: hidden;
