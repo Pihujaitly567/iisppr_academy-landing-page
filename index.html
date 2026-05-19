@@ -8,21 +8,57 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Custom Cursor Glow -->
+    <div id="cursor-glow" class="cursor-glow"></div>
+
+    <!-- Side Banners -->
+    <div class="side-banner side-left">
+        <a href="#" class="side-banner-item" title="Need Help?">💬 <span class="side-banner-text">Support</span></a>
+        <a href="#" class="side-banner-item" title="FAQs">❓ <span class="side-banner-text">FAQs</span></a>
+    </div>
+    
+    <div class="side-banner side-right">
+        <a href="#admissions" class="side-banner-btn">📝 APPLY 2026</a>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader-content">
+            <div class="loader-logo-wrapper">
+                <img src="logo.png" alt="IISPPR Logo" class="loader-logo-img">
+                <div class="loader-ring"></div>
+            </div>
+            <div class="loader-text">
+                <span class="loader-letter" style="animation-delay: 0.1s">I</span>
+                <span class="loader-letter" style="animation-delay: 0.15s">I</span>
+                <span class="loader-letter" style="animation-delay: 0.2s">S</span>
+                <span class="loader-letter" style="animation-delay: 0.25s">P</span>
+                <span class="loader-letter" style="animation-delay: 0.3s">P</span>
+                <span class="loader-letter" style="animation-delay: 0.35s">R</span>
+            </div>
+            <div class="loader-bar-wrapper">
+                <div class="loader-bar"></div>
+            </div>
+            <p class="loader-tagline">International Institute of SDGs & Public Policy Research</p>
+        </div>
+    </div>
 
     <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
+                <img src="logo.png" alt="IISPPR" class="logo-img">
                 <span class="logo-highlight">IISPPR</span>
             </a>
             <ul class="nav-links">
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#what">WHAT</a></li>
-                <li><a href="#curriculum">CURRICULUM</a></li>
-                <li><a href="#admissions">ADMISSIONS</a></li>
+                <li><a href="#about" class="nav-link-anim">ABOUT</a></li>
+                <li><a href="#what" class="nav-link-anim">WHAT</a></li>
+                <li><a href="#curriculum" class="nav-link-anim">CURRICULUM</a></li>
+                <li><a href="#admissions" class="nav-link-anim">ADMISSIONS</a></li>
             </ul>
             <div class="nav-actions">
                 <a href="#" class="btn-login">LOG IN</a>
@@ -37,22 +73,61 @@
     <main>
         <!-- Hero Section -->
         <header class="hero">
-            <div class="hero-bg">
-                <div class="hero-gradient"></div>
+            <div class="hero-slideshow">
+                <div class="hero-slide active" style="background-image: url('hero-slide-1.png')"></div>
+                <div class="hero-slide" style="background-image: url('hero-slide-2.png')"></div>
+            </div>
+            <div class="hero-overlay"></div>
+            <!-- Floating Particles -->
+            <div class="hero-particles">
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
             </div>
             <div class="container hero-content reveal fade-up">
-                <p class="hero-subtitle">FOR BACHELOR & UNDERGRAD</p>
+                <p class="hero-subtitle typewriter-text">FOR BACHELOR & UNDERGRAD</p>
                 <h1 class="hero-title">
                     IISPPR Field & <br>
-                    <span class="highlight-text">Research</span> <br>
+                    <span class="highlight-text shimmer-text">Research</span> <br>
                     Fellowship
                 </h1>
                 <div class="hero-cta-wrapper">
-                    <a href="#" class="btn-primary">Get Course Now</a>
+                    <a href="#" class="btn-primary magnetic-btn">Get Course Now</a>
                     <span class="hero-cta-text">Shape the future with data-driven insights.</span>
+                </div>
+                <!-- Slide Indicators -->
+                <div class="slide-indicators">
+                    <span class="slide-dot active" data-slide="0"></span>
+                    <span class="slide-dot" data-slide="1"></span>
                 </div>
             </div>
         </header>
+
+        <!-- Animated Marquee Banner -->
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <span>🌟 100% Online Curriculum</span>
+                <span class="dot-separator">•</span>
+                <span>🎓 Global Faculty & Mentorship</span>
+                <span class="dot-separator">•</span>
+                <span>📊 Master Data Analysis & Policy</span>
+                <span class="dot-separator">•</span>
+                <span>🚀 Admissions Open for 2026 Cohort</span>
+                <span class="dot-separator">•</span>
+                <span>🌟 100% Online Curriculum</span>
+                <span class="dot-separator">•</span>
+                <span>🎓 Global Faculty & Mentorship</span>
+                <span class="dot-separator">•</span>
+                <span>📊 Master Data Analysis & Policy</span>
+                <span class="dot-separator">•</span>
+                <span>🚀 Admissions Open for 2026 Cohort</span>
+            </div>
+        </div>
 
         <!-- About the Course Section -->
         <section id="about" class="about-course section">
@@ -63,7 +138,7 @@
                 </div>
 
                 <!-- Central Presentation Card -->
-                <div class="presentation-card reveal fade-up delay-1 colorful-hover">
+                <div class="presentation-card reveal fade-up delay-1 colorful-hover tilt-card">
                     <div class="card-inner">
                         <h3 class="card-title">IISPPR<br>FIELD RESEARCH FELLOWSHIP</h3>
                         <div class="card-columns">
@@ -93,19 +168,19 @@
 
                 <!-- Three Info Cards -->
                 <div class="info-cards">
-                    <div class="info-card reveal fade-up delay-1 bounce-hover">
+                    <div class="info-card reveal fade-up delay-1 bounce-hover tilt-card">
                         <div class="card-icon time-icon">⏱️</div>
                         <h4>PROGRAM DURATION</h4>
                         <div class="dots"><span></span><span></span><span></span></div>
                         <p>4 TO 6 WEEKS</p>
                     </div>
-                    <div class="info-card reveal fade-up delay-2 bounce-hover">
+                    <div class="info-card reveal fade-up delay-2 bounce-hover tilt-card">
                         <div class="card-icon date-icon">📅</div>
                         <h4>CLASS DATES</h4>
                         <div class="dots"><span></span><span></span><span></span></div>
                         <p>TO BE NOTIFIED</p>
                     </div>
-                    <div class="info-card reveal fade-up delay-3 bounce-hover">
+                    <div class="info-card reveal fade-up delay-3 bounce-hover tilt-card">
                         <div class="card-icon timing-icon">🛌</div>
                         <h4>CLASS TIMINGS</h4>
                         <div class="dots"><span></span><span></span><span></span></div>
@@ -180,22 +255,37 @@
             <div class="container text-center reveal fade-up">
                 <h2 class="section-title">What Makes This Course <span>Different?</span></h2>
                 <div class="diff-grid">
-                    <div class="diff-card reveal fade-up delay-1 colorful-hover">
+                    <div class="diff-card reveal fade-up delay-1 colorful-hover tilt-card">
+                        <div class="diff-icon-wrapper">
+                            <span class="diff-icon">🧠</span>
+                        </div>
                         <div class="diff-number">01</div>
                         <h4>Critical, Not Just Technical</h4>
+                        <p>We blend hard data skills with deep critical thinking to analyze policy impacts effectively.</p>
                     </div>
-                    <div class="diff-card reveal fade-up delay-2 colorful-hover">
+                    <div class="diff-card reveal fade-up delay-2 colorful-hover tilt-card">
+                        <div class="diff-icon-wrapper">
+                            <span class="diff-icon">🌍</span>
+                        </div>
                         <div class="diff-number">02</div>
                         <h4>Global and Local Lens</h4>
+                        <p>Explore case studies from around the world while applying frameworks to your local community.</p>
                     </div>
-                    <div class="diff-card reveal fade-up delay-3 colorful-hover">
+                    <div class="diff-card reveal fade-up delay-3 colorful-hover tilt-card">
+                        <div class="diff-icon-wrapper">
+                            <span class="diff-icon">🛠️</span>
+                        </div>
                         <div class="diff-number">03</div>
                         <h4>Practical Skills You Can Use</h4>
                         <p>Master tools like data interpretation, ethnography, and policy brief writing to influence real change.</p>
                     </div>
-                    <div class="diff-card reveal fade-up delay-1 colorful-hover">
+                    <div class="diff-card reveal fade-up delay-1 colorful-hover tilt-card">
+                        <div class="diff-icon-wrapper">
+                            <span class="diff-icon">📢</span>
+                        </div>
                         <div class="diff-number">04</div>
                         <h4>Learn to Communicate With Impact</h4>
+                        <p>Develop the ability to translate complex data into compelling narratives for decision-makers.</p>
                     </div>
                 </div>
             </div>
@@ -322,7 +412,7 @@
         <section class="publication-section section text-center colorful-bg-gradient-reverse">
             <div class="container reveal fade-up">
                 <h2 class="section-title">Publication Opportunity <span>with IISPPR</span></h2>
-                <p class="pub-subtext">At the International Institute of SDGs and Public Policy Research (IISPPR), we believe learning should lead to real-world recognition. That’s why we’re offering a unique platform for outstanding contributors:</p>
+                <p class="pub-subtext">At the International Institute of SDGs and Public Policy Research (IISPPR), we believe learning should lead to real-world recognition. That's why we're offering a unique platform for outstanding contributors:</p>
                 
                 <div class="pub-quote hover-lift">
                     "Only the best articles make it — challenge yourself to be among them. Your research. Your voice. Published."
@@ -339,7 +429,7 @@
                 <p class="text-center faculty-desc">Learn from experienced faculty and practitioners in Quantitative Research & Data Science. You'll engage with mentors who bring decades of field experience from academia, domestic, and international agencies.</p>
                 
                 <div class="faculty-grid">
-                    <div class="faculty-card reveal fade-up delay-1 colorful-hover-dark">
+                    <div class="faculty-card reveal fade-up delay-1 colorful-hover-dark tilt-card">
                         <div class="fac-img-wrapper green-outline">
                             <div class="fac-img">AA</div>
                         </div>
@@ -347,7 +437,7 @@
                         <p class="fac-role">ASSISTANT PROFESSOR</p>
                         <p class="fac-inst">Jindal Global Business School</p>
                     </div>
-                    <div class="faculty-card reveal fade-up delay-2 colorful-hover-dark">
+                    <div class="faculty-card reveal fade-up delay-2 colorful-hover-dark tilt-card">
                         <div class="fac-img-wrapper yellow-outline">
                             <div class="fac-img">SH</div>
                         </div>
@@ -355,7 +445,7 @@
                         <p class="fac-role">ASSISTANT PROFESSOR</p>
                         <p class="fac-inst">Jindal School of Government and Public Policy</p>
                     </div>
-                    <div class="faculty-card reveal fade-up delay-3 colorful-hover-dark">
+                    <div class="faculty-card reveal fade-up delay-3 colorful-hover-dark tilt-card">
                         <div class="fac-img-wrapper green-outline">
                             <div class="fac-img">FY</div>
                         </div>
@@ -378,7 +468,7 @@
                     </details>
                     <details class="faq-item faq-hover">
                         <summary>Do I need prior knowledge of Field Research?</summary>
-                        <div class="faq-content">No prior background required. We start from the basics but quickly build towards critical thinking, practical tools, and global case studies. Whether you’re a beginner or have some exposure, you’ll gain valuable insights.</div>
+                        <div class="faq-content">No prior background required. We start from the basics but quickly build towards critical thinking, practical tools, and global case studies. Whether you're a beginner or have some exposure, you'll gain valuable insights.</div>
                     </details>
                     <details class="faq-item faq-hover">
                         <summary>What is the duration and format of the course?</summary>
@@ -386,7 +476,7 @@
                     </details>
                     <details class="faq-item faq-hover">
                         <summary>Will I get a certificate?</summary>
-                        <div class="faq-content">Yes. Upon successful completion, you’ll receive a Certificate of Completion, demonstrating your understanding of data science fundamentals, critical thinking, and applied skills like data interpretation and policy writing.</div>
+                        <div class="faq-content">Yes. Upon successful completion, you'll receive a Certificate of Completion, demonstrating your understanding of data science fundamentals, critical thinking, and applied skills like data interpretation and policy writing.</div>
                     </details>
                     <details class="faq-item faq-hover">
                         <summary>What's the course fee?</summary>
@@ -396,6 +486,11 @@
             </div>
         </section>
     </main>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top-btn" class="scroll-top-btn" aria-label="Scroll to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
 
     <!-- Sticky Bottom Banner -->
     <div class="sticky-banner">
